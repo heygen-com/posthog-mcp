@@ -341,6 +341,22 @@ export class ApiClient {
 					return { success: false, error: error as Error };
 				}
 			},
+
+			activity: async ({
+				params,
+			}: { params?: { limit?: number; offset?: number } } = {}): Promise<Result<any>> => {
+				const activityResponseSchema = z.any();
+				const searchParams = new URLSearchParams();
+
+				if (params?.limit) searchParams.append("limit", String(params.limit));
+				if (params?.offset) searchParams.append("offset", String(params.offset));
+
+				const url = `${this.baseUrl}/api/projects/${projectId}/feature_flags/activity${
+					searchParams.toString() ? `?${searchParams}` : ""
+				}`;
+
+				return this.fetchWithSchema(url, activityResponseSchema);
+			},
 		};
 	}
 

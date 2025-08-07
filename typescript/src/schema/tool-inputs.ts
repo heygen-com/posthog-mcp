@@ -62,6 +62,11 @@ export const FeatureFlagGetDefinitionSchema = z.object({
 	flagKey: z.string().optional(),
 });
 
+export const FeatureFlagGetActivitySchema = z.object({
+	limit: z.number().int().positive().optional(),
+	offset: z.number().int().nonnegative().optional(),
+});
+
 export const FeatureFlagUpdateSchema = z.object({
 	flagKey: z.string(),
 	data: UpdateFeatureFlagInputSchema,

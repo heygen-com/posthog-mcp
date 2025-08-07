@@ -356,6 +356,20 @@
       ],
       "additionalProperties": false
     },
+    "FeatureFlagGetActivitySchema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
     "FeatureFlagGetAllSchema": {
       "type": "object",
       "properties": {},

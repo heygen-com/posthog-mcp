@@ -6,6 +6,7 @@ import getAllFeatureFlags from "./featureFlags/getAll";
 import createFeatureFlag from "./featureFlags/create";
 import updateFeatureFlag from "./featureFlags/update";
 import deleteFeatureFlag from "./featureFlags/delete";
+import getFeatureFlagActivity from "./featureFlags/getActivity";
 
 // Organizations
 import getOrganizations from "./organizations/getOrganizations";
@@ -50,6 +51,7 @@ const tools = (_context: Context): Tool<ZodObjectAny>[] => [
 	createFeatureFlag(),
 	updateFeatureFlag(),
 	deleteFeatureFlag(),
+	getFeatureFlagActivity(),
 
 	// Organizations
 	getOrganizations(),

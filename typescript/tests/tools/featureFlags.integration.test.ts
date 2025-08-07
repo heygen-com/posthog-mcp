@@ -16,6 +16,7 @@ import updateFeatureFlagTool from "@/tools/featureFlags/update";
 import deleteFeatureFlagTool from "@/tools/featureFlags/delete";
 import getAllFeatureFlagsTool from "@/tools/featureFlags/getAll";
 import getFeatureFlagDefinitionTool from "@/tools/featureFlags/getDefinition";
+import getFeatureFlagActivityTool from "@/tools/featureFlags/getActivity";
 import type { Context } from "@/tools/types";
 
 describe("Feature Flags", { concurrent: false }, () => {
